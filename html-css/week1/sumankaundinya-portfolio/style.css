@@ -88,7 +88,7 @@ nav ul li a:hover {
 section {
     padding: 60px 20px;
     text-align: center;
-    background:rgba(0, 0, 0, 0.5); /* Transparent white background for text readability */
+    background:rgba(0, 0, 0, 0.5); /* Transparent dark background for text readability */
     margin: 20px auto;
     max-width: 900px;
     border-radius: 10px;
