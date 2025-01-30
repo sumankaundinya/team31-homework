@@ -118,7 +118,7 @@ body a {
   color: #939393;
 }
 
-.card_info {
+.card__title {
   font-size: 24px;
   font-weight: 700;
   font-family: Arial;
