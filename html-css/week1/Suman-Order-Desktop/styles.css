@@ -287,7 +287,7 @@ body a {
   }
 
   .order_summary {
-    align-self: flex-start; /* Added missing semicolon */
+    align-self: flex-start; 
   }
   .card {
     padding: 54px 15px;
