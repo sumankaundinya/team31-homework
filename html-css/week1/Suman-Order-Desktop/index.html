@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Fonts link as per Yasen's suggestion -->
         <link rel="stylesheet" href="styles.css">
         <title>ORDER SUMMARY FORM</title> 
     </head>
@@ -18,7 +19,9 @@
                     <p>Total</p>
                     <p>$333 / month</p>
                 </div>
-                <hr class="order_line">
+                
+                </div> 
+                <!--Removed <hr class="order_line"> as per Yasen's suggestion -->
                 <div class="order_totalnow">
                     <p>Total</p>
                     <p>$100</p>
@@ -37,11 +40,12 @@
 
         <!-- Card Data Input -->
         <section class="card">
-            <h2 class="card_info">Card Info</h2>
+            <!--Changed class name from .card_info to .card__title as per Yasen's comment-->
+    <h2 class="card__title">Card Info</h2>  
             <article class="card_input">
                 <div class="card_data">
-                    <p class="card_text">Card number</p>
-                    <input class="card_number" type="text" placeholder="1234 1234 1234 1234" required>
+                    <label for="card-number" class="card__label">Card number</label>
+                    <input class="card_number" id="card-number" type="text" name="card-number" placeholder="1234 1234 1234 1234" required>
                 </div>
                 <div class="card_safety">
                     <div class="card_expiry">
@@ -58,7 +62,7 @@
 
         <!-- Buy-Now Button -->
         <section class="buy">
-            <button class="buy_now" type="submit">Buy Now</button>
+            <button class="primary-button" type="submit">Buy Now</button> <!-- Changed class from .buy_now to .primary-button as per Yasen's suggestion-->
         </section>
 
         <!-- Help Anchor -->
