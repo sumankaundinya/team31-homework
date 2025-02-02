@@ -29,7 +29,7 @@ body a {
   display: flex;
   justify-content: space-between;
   opacity: 0.8;
-  border-bottom: 2px solid white; /* Yasen's suggested change applied here */
+  border-bottom: 2px solid white; 
 }
 
 .order_totalnow {
