@@ -1,8 +1,8 @@
 // Peter's house details
-const peterWidth = 8;
-const peterDepth = 10;
-const peterHeight = 10;
-const peterGardenSize = 100;
+const peterHouseWidth = 8;
+const peterHouseDepth = 10;
+const peterHouseHeight = 10;
+const peterHouseGardenSize = 100;
 const peterHouseCost = 2500000;
 
 // Julia's house details
