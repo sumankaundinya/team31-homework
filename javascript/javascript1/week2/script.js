@@ -12,7 +12,23 @@ function getFullname(firstname, surname, useFormalName = false) {
   const fullname2 = getFullname("Benjamin", "Hughes", false); // "Benjamin Hughes"
   document.getElementById("fullname1").textContent = fullname1;
   document.getElementById("fullname2").textContent = fullname2;
-  
+  //If the person is a woman
+function getFullname(firstname, surname, useFormalName = false, gender = "unspecified") {
+    if (!firstname || !surname) return "Invalid input"; 
+    
+    if (useFormalName) {
+        if (gender.toLowerCase() === "male") {
+            return `Lord ${firstname} ${surname}`;
+        } else if (gender.toLowerCase() === "female") {
+            return `Lady ${firstname} ${surname}`;
+        } else {
+            return `Mx. ${firstname} ${surname}`; // Gender-neutral title
+        }
+    } else {
+        return `${firstname} ${surname}`;
+    }
+}
+
   // Event Application Function
   function getEventWeekday(daysFromToday) {
     const today = new Date();
