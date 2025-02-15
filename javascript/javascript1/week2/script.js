@@ -56,7 +56,7 @@ function getFullname(firstname, surname, useFormalName = false, gender = "unspec
   const class07Students = [];
   
   function addStudentToClass(studentName) {
-    if (studentName === "") {
+    if (!studentName) {
       console.log("Cannot add empty name to class");
       return;
     }
