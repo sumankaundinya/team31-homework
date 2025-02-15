@@ -38,7 +38,8 @@ function getFullname(firstname, surname, useFormalName = false, gender = "unspec
     return weekdays[eventDay];
   }
   
-  document.getElementById("eventWeekday").textContent = getEventWeekday(9); // "Thursday"
+  document.getElementById("eventWeekday").textContent = getEventWeekday(9); // Returns the weekday name for the day that is eventDay days from today
+
   
   // Weather Wear Function
   function whatToWear(temperature) {
