@@ -85,37 +85,47 @@ function getFullname(firstname, surname, useFormalName = false, gender = "unspec
   
   document.getElementById("studentNumber").textContent = `Total students: ${getNumberOfStudents()}`;
   
-  // Candy Helper (Add Candy Function)
-  const boughtCandyPrices = [];
-  
-  function addCandy(candyType, weight) {
-    const prices = {
-      sweet: 0.5,
-      chocolate: 0.7,
-      toffee: 1.1,
-      "chewing-gum": 0.03,
-    };
-  
-    if (prices[candyType]) {
-      boughtCandyPrices.push(prices[candyType] * weight);
-    } else {
-      console.log("Invalid candy type");
-    }
+ // Candy Helper (Add Candy Function)
+const boughtCandyPrices = [];
+
+// Candy prices stored globally to avoid re-creating on each function call
+const prices = {
+  sweet: 0.5,
+  chocolate: 0.7,
+  toffee: 1.1,
+  "chewing-gum": 0.03,
+};
+
+function addCandy(candyType, weight) {
+  // Convert candyType to lowercase to handle case-insensitive inputs
+  const candyName = candyType.toLowerCase();
+
+  if (prices[candyName]) {
+    boughtCandyPrices.push(prices[candyName] * weight);
+  } else {
+    console.log(`Invalid candy type: "${candyType}". Please choose from: ${Object.keys(prices).join(", ")}`);
   }
-  
-  function canBuyMoreCandy() {
-    const totalPrice = boughtCandyPrices.reduce((sum, price) => sum + price, 0);
-    const amountToSpend = Math.random() * 100;
-    if (totalPrice < amountToSpend) {
-      console.log("You can buy more, so please do!");
-      return true;
-    } else {
-      console.log("Enough candy for you!");
-      return false;
-    }
+}
+
+function canBuyMoreCandy() {
+  const totalPrice = boughtCandyPrices.reduce((sum, price) => sum + price, 0);
+  const amountToSpend = Math.random() * 100;
+
+  if (totalPrice < amountToSpend) {
+    console.log("You can buy more candy, so please do!");
+    return true;
+  } else {
+    console.log("Enough candy for you!");
+    return false;
   }
-  
-  addCandy("sweet", 20); // Adds 10
-  addCandy("chocolate", 30); // Adds 21
-  document.getElementById("candyStatus").textContent = canBuyMoreCandy() ? "You can buy more, so please do!" : "Enough candy for you!";
-  
+}
+
+// Add candies
+addCandy("Sweet", 20);     // Works with different casing
+addCandy("Chocolate", 30); // Works with different casing
+
+if (canBuyMoreCandy()) {
+  document.getElementById("candyStatus").textContent = "You can buy more!";
+} else {
+  document.getElementById("candyStatus").textContent = "Enough candy!";
+}
