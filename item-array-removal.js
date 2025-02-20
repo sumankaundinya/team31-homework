@@ -1,6 +1,8 @@
-console.log("======== item-array-removal ========");
+function removeName(namesArray, nameToRemove) {
+  return namesArray.filter((name) => name !== nameToRemove);
+}
 
-let names = [
+const names = [
   "Peter",
   "Ahmad",
   "Yana",
@@ -13,6 +15,6 @@ let names = [
 
 const nameToRemove = "Ahmad";
 
-names = names.filter((item) => item !== nameToRemove);
+const updatedNames = removeName(names, nameToRemove);
 
-console.log(names);
+console.log(updatedNames);
