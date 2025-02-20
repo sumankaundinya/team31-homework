@@ -1,3 +1,0 @@
-This is my first homework entry.
-Add more text to my_homework.txt
-Final edits before checking the pull request.
