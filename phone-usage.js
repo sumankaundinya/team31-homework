@@ -64,3 +64,4 @@ addActivity("Browsing Facebook", 30);
 addActivity("Reading News", 20);
 showStatus();
 getMostUsedActivity();
+<!-- Minor change to enable pull request  -->
