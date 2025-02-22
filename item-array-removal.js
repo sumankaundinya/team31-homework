@@ -18,4 +18,3 @@ const updatedNames = removeName(names, nameToRemove);
 
 console.log(updatedNames);
 // Output: ["Peter", "Yana", "kristina", "Rasmus", "Samuel", "katrine", "Tala"]
-<!-- Minor change to enable pull request -->

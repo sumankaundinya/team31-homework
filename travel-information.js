@@ -15,4 +15,3 @@ function getTravelTime(information) {
 
 const travelTime = getTravelTime(travelInformation);
 console.log(travelTime); // 8 hours and 38 minutes
-<!-- Minor change to enable pull request -->

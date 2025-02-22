@@ -40,4 +40,3 @@ function logOutNotesFormatted() {
 }
 
 logOutNotesFormatted();
-<!-- Minor change to enable pull request -->
