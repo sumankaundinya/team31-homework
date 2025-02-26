@@ -34,7 +34,7 @@ function showStatus() {
 }
 
 function getMostUsedActivity() {
-  if (activities.length === 0) {
+  if (!activities.length) {
     console.log("No activities recorded yet.");
     return;
   }
