@@ -6,7 +6,7 @@ const notes = [];
 
 function saveNote(content, id) {
   const time = new Date(); // adding unique feature (adding current time for each note)
-  notes.push({ content: content, id: id, time: time.toLocaleTimeString() });
+  notes.push({ content, id, time: time.toLocaleTimeString() });
 }
 
 saveNote("Pick up groceries", 1);
