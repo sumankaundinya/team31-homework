@@ -163,8 +163,8 @@ document
       ingredients,
       description,
     };
-
-    displayRecipe(newRecipe);
+recipeArray.push(newRecipe);
+    displayRecipe(recipeArray);
     document.getElementById("recipe-form").reset();
 
     ingredientContainer.innerHTML = "";
