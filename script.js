@@ -81,10 +81,10 @@ function displayRecipe(recipeArray) {
         <img src="${recipe.picture_url}" alt="${recipe.title}" width="200">
         <p>${recipe.description}</p>
         <h3>Ingredients:</h3>
-        <ul id="ingredient-list"></ul>
+        <ul class="ingredient-list"></ul>
       `;
 
-    const ingredientList = recipeCard.querySelector("#ingredient-list");
+    const ingredientList = recipeCard.querySelector(".ingredient-list");
     for (let i = 0; i < recipe.ingredients.length; i++) {
       const li = document.createElement("li");
       li.innerText = `${recipe.ingredients[i].NAME}: ${recipe.ingredients[i].AMOUNT}`;
@@ -105,11 +105,15 @@ document.getElementById("sort-button").addEventListener("click", function () {
 });
 
 document.getElementById("search-input").addEventListener("input", function () {
-  const searchTerm = this.value.toLowerCase();
-  const filteredRecipes = recipeArray.filter((recipe) =>
-    recipe.title.toLowerCase().includes(searchTerm)
-  );
-  displayRecipe(filteredRecipes);
+   const searchTerm = this.value.toLowerCase();
+   if (!searchTerm) {
+     displayRecipe(recipeArray);
+     return;
+   }
+   const filteredRecipes = recipeArray.filter((recipe) =>
+     recipe.title.toLowerCase().includes(searchTerm)
+   );
+   displayRecipe(filteredRecipes);
 });
 function createIngredientInput(value = "", amount = "") {
   const div = document.createElement("div");
@@ -143,7 +147,7 @@ document
     const ingredientInputs = document.querySelectorAll(".ingredient-input");
     const ingredientAmounts = document.querySelectorAll(".ingredient-amount");
 
-    if (ingredientInputs.length < 4) {
+    if (ingredientInputs.length < 5) {
       alert("Please add at least 5 ingredients.");
       return;
     }
@@ -168,7 +172,6 @@ recipeArray.push(newRecipe);
     document.getElementById("recipe-form").reset();
 
     ingredientContainer.innerHTML = "";
-    for (let i = 0; i < 4; i++) {
-      ingredientContainer.appendChild(createIngredientInput());
-    }
+    ingredientContainer.appendChild(createIngredientInput());
+    
   });
