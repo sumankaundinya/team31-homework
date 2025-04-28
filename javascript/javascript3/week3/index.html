@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-controls styled-controls">
+      <section class="timer-group">
+        <h3 class="timer-heading">Cooking Timer</h3>
+        <input
+          type="number"
+          id="timerInput"
+          placeholder="Enter Minutes"
+          class="timer-input"
+        />
+        <button id="startTimer" class="start-timer">Start Timer</button>
+        <p id="timerDisplay" class="timer-display">Time left:</p>
+      </section>
+
+      <section class="action-group">
+        <button type="button" id="sort-button">Sort by Ingredients</button>
+        <input
+          type="text"
+          id="search-ingredient"
+          placeholder="Search Ingredients"
+        />
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search Recipes by Title"
+        />
+      </section>
+
+      <section class="time-spent">
+        <p class="time-label">Time spent on this page:</p>
+        <span id="timeSpent" class="time-value">0 seconds</span>
+      </section>
+    </header>
+
+    <main>
+      <h1>RECIPE APP</h1>
+      <section id="recipe-container"></section>
+
+      <form id="recipe-form">
+        <h3>Add a New Recipe</h3>
+        <input type="text" id="title" placeholder="Recipe Title" required />
+        <input type="text" id="picture" placeholder="Image URL" required />
+        <textarea
+          id="description"
+          placeholder="Recipe Description"
+          required
+        ></textarea>
+
+        <h3>Ingredients</h3>
+        <div id="ingredient-container">
+          <div class="ingredient-entry"></div>
+        </div>
+
+        <button type="button" id="add-ingredient" class="add-ingredient-btn">
+          + Add More
+        </button>
+        <button type="submit" class="submit-recipe">Submit Recipe</button>
+      </form>
+    </main>
+
+    <button id="backToTopBtn" title="Go to top">↑</button>
+
+    <footer>
+      <p>&copy; 2025 Recipe App. All rights reserved.</p>
+    </footer>
+
+    <script src="recipeAppFinal.js"></script>
+  </body>
+</html>
