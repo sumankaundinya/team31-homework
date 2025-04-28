@@ -1,0 +1,308 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("indianFlag.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timer-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timer-heading {
+  color: darkorange;
+}
+
+.timer-input {
+  width: 110px;
+  padding: 8px 15px;
+  border: 2px solid blue;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.start-timer {
+  padding: 8px 15px;
+  border: 2px solid blue;
+  height: 36px;
+  background-color: green;
+  color: black;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.start-timer:hover {
+  background-color: darkgreen;
+}
+
+.timer-display {
+  color: darkorange;
+  margin-top: 20px;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sort-button,
+#search-ingredient,
+#search-input {
+  background-color: white;
+  color: #333;
+  border: 2px solid #ff5733;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+#search-input {
+  background-color: green;
+  color: #fff;
+}
+
+#sort-button {
+  background-color: darkorange;
+  color: black;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+#sort-button:hover {
+  background-color: darkorange;
+}
+
+#search-input::placeholder,
+#search-ingredient::placeholder {
+  color: black;
+}
+
+.time-spent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-label,
+.time-value {
+  color: darkorange;
+}
+
+#recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  background: #000000;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px orange;
+  width: 280px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-card h2 {
+  font-size: 1.5rem;
+  color: darkorange;
+  text-align: center;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.recipe-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe-card ul li {
+  background: darkorange;
+  color: black;
+  font-size: 0.9rem;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: darkorange;
+  text-align: center;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.recipe-card h3 {
+  color: darkorange;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  background: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#recipe-form h2 {
+  color: #ff5733;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+#recipe-form h3 {
+  color: #ff5733;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#recipe-form .ingredient-entry {
+  font-weight: bold;
+}
+
+input,
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff5733;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #04381e;
+  color: white;
+}
+
+#description {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff5733;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #04381e;
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: white;
+}
+
+#timerInput::placeholder {
+  color: black;
+}
+
+.timer-input {
+  color: black;
+}
+
+.ingredient-entry {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-ingredient-btn,
+.submit-recipe {
+  background-color: darkorange;
+  color: black;
+  padding: 10px 15px;
+  border: orangered 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.add-ingredient-btn:hover,
+.submit-recipe:hover {
+  background-color: darkorange;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+}
+
+#backToTopBtn:hover {
+  background-color: #333;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: white;
+}
