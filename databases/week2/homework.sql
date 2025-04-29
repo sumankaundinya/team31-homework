@@ -3,7 +3,7 @@ Part 1: Working with tasks
 SELECT * FROM TASK;
 --1.Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id
 INSERT INTO TASK (title, description, created, updated, due_date, status_id, user_id) 
-VALUES ('Task 1', 'Description 1', '2025-04-01 10:00:00', '2025-04-01 10:00:00', '2025-04-05 10:00:00', 1, 1);
+VALUES ('DB ASSIGNMENT', 'WEEK2 SQL QUERIES', '2025-04-01 10:00:00', '2025-04-01 10:00:00', '2025-04-05 10:00:00', 1, 1);
 --2.Change the title of a task
 UPDATE task SET TITLE = "TITLE CHANGED" WHERE ID = 36;
 --3.Change a task due date
