@@ -7,9 +7,11 @@ SHOW TABLES;
 -- To see all the statuses in the database because we need to know the statuses and their id's
 SELECT * from status; 
 -- 3.Find all the tasks that are marked as done
-Select * from task where status_id = 3; 
+Select * from task join status ON status.id = task.status_id
+WHERE status.name = 'done'; 
 -- 4.Find all the tasks that are not marked as done
-SELECT * from task where status_id != 3; 
+Select * from task join status ON status.id = task.status_id
+WHERE status.name != 'done'; 
 -- 5.Get all the tasks, sorted with the most recently created first
 select * from task ORDER BY created DESC; 
 -- 6.Get the single most recently created task
