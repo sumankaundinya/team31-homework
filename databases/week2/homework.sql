@@ -5,9 +5,9 @@ SELECT * FROM TASK;
 INSERT INTO TASK (title, description, created, updated, due_date, status_id, user_id) 
 VALUES ('DB ASSIGNMENT', 'WEEK2 SQL QUERIES', '2025-04-01 10:00:00', '2025-04-01 10:00:00', '2025-04-05 10:00:00', 1, 1);
 --2.Change the title of a task
-UPDATE task SET TITLE = "TITLE CHANGED" WHERE ID = 36;
+UPDATE task SET TITLE = 'TITLE CHANGED' WHERE ID = 36;
 --3.Change a task due date
-UPDATE task SET DUE_DATE = "2025-04-29 10:44:00" WHERE ID = 36;
+UPDATE task SET DUE_DATE = '2025-04-29 10:44:00' WHERE ID = 36;
 --4.Change a task status
 UPDATE TASK SET STATUS_ID = 2 WHERE ID = 36;
 SELECT * FROM status;
