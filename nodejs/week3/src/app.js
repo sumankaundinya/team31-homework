@@ -12,11 +12,13 @@ app.use(express.json());
 app.get("/api/contacts", async (req, res) => {
   let query = knexInstance.select("*").from("contacts");
 
+  const allowedColumns = ["id", "name", "email", "phone"];
   if ("sort" in req.query) {
-    const allowedColumns = ["id", "name", "email", "phone"];
     const orderBy = req.query.sort?.toString();
-    console.log("SQL", query.toSQL().sql);
-    if (orderBy && allowedColumns.includes(orderBy)) {
+    if (orderBy && !allowedColumns.includes(orderBy)) {
+      return res.status(400).json({ error: "Invalid sort column" });
+    }
+    if (orderBy) {
       query = query.orderBy(orderBy);
     }
   }
