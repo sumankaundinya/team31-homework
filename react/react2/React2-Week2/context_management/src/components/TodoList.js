@@ -14,7 +14,7 @@ function TodoList() {
 
   return (
     <div style={{ marginTop: "2rem" }}>
-      <h2>📝 Todo List</h2>
+      <h2>4) Todo List</h2>
 
       <input
         type="text"

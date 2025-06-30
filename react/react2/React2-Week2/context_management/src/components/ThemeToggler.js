@@ -15,6 +15,7 @@ function ThemeToggler() {
         borderRadius: "10px",
       }}
     >
+      <h2>2) Theme Toggler</h2>
       <h2>
         {translations.greeting}! {translations.currentTheme}:{" "}
         {theme === "light" ? translations.theme : translations.themeDark}

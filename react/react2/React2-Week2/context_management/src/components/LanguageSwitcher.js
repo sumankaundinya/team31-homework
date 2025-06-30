@@ -6,6 +6,7 @@ function LanguageSwitcher() {
 
   return (
     <div style={{ marginBottom: "1rem" }}>
+      <h2>1) Language Switcher</h2>
       <button onClick={switchLanguage}>
         Switch Language (Current: {language})
       </button>
