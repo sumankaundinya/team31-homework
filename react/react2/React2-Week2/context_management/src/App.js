@@ -8,7 +8,7 @@ import Counter from "./components/Counter";
 function App() {
   return (
     <div className="App">
-      <h1>🌍 Localization + 🎨 Theme + ✅ Todos</h1>
+      <h1>Localization + Theme + Todos</h1>
       <LanguageSwitcher />
       <ThemeToggler />
       <Counter />
